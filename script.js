@@ -1,9 +1,9 @@
 let addTask = document.getElementById('add-task');
 let AddBtn = document.getElementById('AddBtn');
-let newTask = document.getElementById('newTask');
 let add;
 let mood = 'ADD';
 let x;
+let display = 0;
 if(localStorage.Task != null){
     add = JSON.parse(localStorage.Task);
 }
@@ -12,7 +12,7 @@ else{
 }
 AddBtn.onclick = function(){
     let newTask = addTask.value;
-    if(mood == 'ADD'){
+    if(mood === 'ADD'){
         add.push(newTask);
         addTask.value = '';
     }
@@ -33,14 +33,14 @@ function task(){
         show += `
         <div id = "task">
             <h3> ${add[i]} </h3> 
-            <i class="fa" id="check"> &#xf00c; </i>
+            <i class="fa"> &#xf00c; </i>
             <button id="EdtieBtn" onclick = 'edite(${i})'> Edite</button> 
             <button id="DeleteBtn" onclick = 'deleteTask(${i})'> Delete</button> 
             <button id="DoneBtn" onclick = 'done(${i})'> Done</button>
         </div>
         `;
     }
-    document.getElementById('newTask').innerHTML = show;
+    document.getElementById('tasks').innerHTML = show;
 }
 task();
 function deleteTask(i){
@@ -54,8 +54,14 @@ function edite(i){
     mood = 'EDITE';
     x = i;
 }
-let check = document.getElementById('check');
 function done(i){
-    console.log(i)
-    check.style.visibility.valueOf(i) = 'hidden';
+    let check = document.querySelectorAll('i')[i];
+    if(display == 0){
+        check.style.visibility = 'visible';
+        display = 1;
+    }
+    else{
+        check.style.visibility= 'hidden';
+        display = 0;
+    }
 }

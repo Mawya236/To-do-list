@@ -69,3 +69,7 @@ input{
     border-radius: 10px;
     cursor: pointer;
 }
+.fa{
+    visibility: hidden;
+    color: rgb(83, 223, 83);
+}
