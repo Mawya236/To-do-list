@@ -9,8 +9,7 @@ body{
     max-height: 100vh;
 }
 .container{
-    width: 400px;
-    height: auto;
+    width: 600px;
     padding: 30px;
     background: transparent;
     border: 2px solid #9a466e;
@@ -26,50 +25,52 @@ h1{
 }
 input{
     outline: none;
-    width: 80%;
+    width: 70%;
     padding: 10px 20px;
     background-color: transparent;
     border: 2px solid #9a466e;
     border-radius: 10px;
     color: white;
     font-size: 15px;
+    margin-top: 2%;
 }
-#AddBtn{
+#AddBtn, .edite #editebtn{
     background-color: #9a466e;
     border: none;
     color: white;
-    width: 16%;
+    width: 27%;
     padding: 13px 0;
     border-radius: 10px;
     margin-left: 2%;
     cursor: pointer;
 }
-#newTask{
-    height: 300px;
+#NewTask{
+    height: auto;
     overflow: overlay;
+    /* overflow: auto; */
 }
-#task{
+.task{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    /* gap: 3%; */
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
+    align-items: center;
     margin-top: 3%;
     background-color: #2f183b;
     padding: 10px 20px;
-    height: 40px;
+    height: auto;
     border: 2px solid #9a466e;
     border-radius: 10px;
     transition: all 0.2s ease;
 }
-#task button{
+.task button{
     background-color: #9a466e;
     border: none;
     color: white;
-    width: 50px;
+    width: 90px;
+    height: 35px;
     border-radius: 10px;
     cursor: pointer;
 }
-.fa{
-    visibility: hidden;
-    color: rgb(83, 223, 83);
+.edite{
+    display: none;
 }
