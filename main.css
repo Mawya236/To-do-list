@@ -34,7 +34,14 @@ input{
     font-size: 15px;
     margin-top: 2%;
 }
-#AddBtn, .edite #editebtn{
+input::placeholder{
+    font-size: 15px;
+    color: white;
+}
+#AddTask:focus, #EditeInput:focus{
+    transform: scale(1.07);
+}
+#AddBtn, #edite #updatebtn{
     background-color: #9a466e;
     border: none;
     color: white;
@@ -43,13 +50,13 @@ input{
     border-radius: 10px;
     margin-left: 2%;
     cursor: pointer;
+    font-weight: bold;
 }
 #NewTask{
-    height: auto;
-    overflow: overlay;
-    /* overflow: auto; */
+    max-height: 400px;
+    overflow: auto;
 }
-.task{
+#NewTask li{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
@@ -62,7 +69,7 @@ input{
     border-radius: 10px;
     transition: all 0.2s ease;
 }
-.task button{
+#NewTask button{
     background-color: #9a466e;
     border: none;
     color: white;
@@ -70,7 +77,11 @@ input{
     height: 35px;
     border-radius: 10px;
     cursor: pointer;
+    font-weight: bold;
 }
-.edite{
+#edite{
     display: none;
+}
+#AddBtn:hover, #NewTask button:hover, #updatebtn:hover{
+    background-color: #2f183b;
 }
