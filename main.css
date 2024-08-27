@@ -85,3 +85,25 @@ input::placeholder{
 #AddBtn:hover, #NewTask button:hover, #updatebtn:hover{
     background-color: #2f183b;
 }
+/* width */
+::-webkit-scrollbar {
+    scrollbar-width: thin;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #9a466e; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2f183b; 
+  }
